@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html><head><title>403 forbiden</title></head><body>
+<script>
+  document.body.style.background = "#000";
+  document.body.style.color = "#0f0";
+  document.body.style.fontFamily = "monospace";
+  document.body.style.margin = "0";
+  document.body.style.padding = "0";
+
+  let box = document.createElement('div');
+  box.style.border = "2px solid #0f0";
+  box.style.padding = "30px";
+  box.style.maxWidth = "700px";
+  box.style.margin = "100px auto";
+  box.style.background = "#101010";
+  box.style.boxShadow = "0 0 20px #0f0";
+
+  box.innerHTML = `
+    <div style="font-size:48px;font-weight:bold;">403 - KEPO BANGET SIH BANG</div>
+    <div style="margin-top:20px;font-size:18px;">
+      &gt; You are not authorized to access this directory.<br>
+      &gt; Intrusion attempt detected...<br>
+      &gt; Logging IP address... <span id="blink">█</span><br>
+      &gt; System lockdown engaged.<br>
+      &gt; Please contact administrator or retreat now.
+    </div>
+  `;
+
+  document.body.appendChild(box);
+
+  // Blinking effect
+  setInterval(() => {
+    let blink = document.getElementById("blink");
+    if (blink) blink.style.visibility = blink.style.visibility === "hidden" ? "visible" : "hidden";
+  }, 500);
+</script>
